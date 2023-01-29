@@ -5,8 +5,17 @@
 [![GitHub license](https://img.shields.io/github/license/koiusa/DockerWithRaspberryPi)](https://github.com/koiusa/DockerWithRaspberryPi/blob/main/LICENSE)
 
 ##
-設定ファイルの解釈は認識間違っている場合もあるので、ご了承お願いします。
+設定ファイルの解釈は誤認している場合もありますが、ご了承のほどお願いします。  
 Please note that my may have misinterpreted the configuration file.
+
+
+## Testing Operating Environment
+動作確認環境
+```
+Model : Raspberry Pi 4 Model B Rev 1.2
+debian_version 10.13
+Linux raspberrypi 5.15.89-v7l+ #1620 SMP Wed Jan 18 12:22:20 GMT 2023 armv7l GNU/Linux
+```
 
 ## 
 スクリプト配置ディレクトリへ移動
