@@ -59,8 +59,6 @@ function run_install() {
 }
 
 function get_option() {
- local opt optarg
-
  while getopts hv OPT
  do
   case "${OPT}" in

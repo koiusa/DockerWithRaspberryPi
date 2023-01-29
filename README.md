@@ -1,5 +1,9 @@
 # DockerWithRaspberryPi
 
+[![GitHub commit activity](https://img.shields.io/github/commit-activity/m/koiusa/DockerWithRaspberryPi)](https://github.com/koiusa/DockerWithRaspberryPi/graphs/commit-activity)
+[![GitHub issues](https://img.shields.io/github/issues/koiusa/DockerWithRaspberryPi)](https://github.com/koiusa/DockerWithRaspberryPi/issues)
+[![GitHub license](https://img.shields.io/github/license/koiusa/DockerWithRaspberryPi)](https://github.com/koiusa/DockerWithRaspberryPi/blob/main/LICENSE)
+
 ##
 設定ファイルの解釈は認識間違っている場合もあるので、ご了承お願いします。
 Please note that my may have misinterpreted the configuration file.
