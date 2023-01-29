@@ -1,0 +1,31 @@
+version: '3.8'
+services:
+  redmine:
+    image: redmine
+    container_name: redmine
+    ports:
+      - 8080:3000
+    volumes:
+      - ./files:/usr/src/redmine/files
+      - ./log:/usr/src/redmine/log
+      - ./plugins:/usr/src/redmine/plugins
+      - ./public/themes:/usr/src/redmine/public/themes
+    environment:
+      REDMINE_DB_POSTGRES: redmine-db
+      REDMINE_DB_DATABASE: redmine
+      REDMINE_DB_USERNAME: redmine
+      REDMINE_DB_PASSWORD: redmine
+      REDMINE_DB_ENCODING: utf8
+    depends_on:
+      - redmine-db
+    restart: always
+
+  redmine-db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_DB: redmine-db
+      POSTGRES_USER: redmine
+      POSTGRES_PASSWORD: redmine
+    volumes:
+      - ./dbdata/:/var/lib/postgresql/data

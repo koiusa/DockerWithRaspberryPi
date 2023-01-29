@@ -1,0 +1,8 @@
+docker:
+  env:
+    root: /mnt/portable/docker/root
+    version: 
+
+docker_compose:
+  env:
+    version: v2.15.1
