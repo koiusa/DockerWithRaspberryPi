@@ -7,9 +7,15 @@ SCRIPT_DIR=$(cd $(dirname $0); pwd)
 function usage() {
   cat <<EOM
 Usage: $(basename "$0") [OPTION]...
-  -h Display help
-  -v Display Version
-  status (docker | compose | all) Display Status
+  -h > display help
+  -v > display version
+  status [docker | compose | all] > display status
+  install > docker install
+  init > docker environment Setup
+  start > docker engine Start
+  stop > docker engine Stop
+  run [path/to/docker-compose.yml] > docker-compose up
+  clean > doker-compose process clean
 EOM
 }
 
@@ -57,7 +63,6 @@ function get_option() {
 
  while getopts hv OPT
  do
- # OPTIND 番目の引数を optarg へ代入
   case "${OPT}" in
      v|-version)
 	     show_version
