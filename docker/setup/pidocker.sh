@@ -10,7 +10,7 @@ Usage: $(basename "$0") [OPTION]...
   -h > display help
   -v > display version
   status [docker | compose | all] > display status
-  install > docker install
+  install [docker | compose] > docker install
   init > docker environment Setup
   start > docker engine Start
   stop > docker engine Stop
