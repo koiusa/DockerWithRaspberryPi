@@ -15,6 +15,9 @@ Please note that my may have misinterpreted the configuration file.
 Model : Raspberry Pi 4 Model B Rev 1.2
 debian_version 10.13
 Linux raspberrypi 5.15.89-v7l+ #1620 SMP Wed Jan 18 12:22:20 GMT 2023 armv7l GNU/Linux
+
+Docker version 20.10.23, build 7155243
+Docker Compose version v2.15.1
 ```
 
 ## 
