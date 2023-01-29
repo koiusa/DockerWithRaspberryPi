@@ -108,7 +108,7 @@ docker exec -it ${CONTAINER_NAME} createdb redmine --encoding=utf8 -O redmine -U
 Redimeのdocker-composeを実行  
 Redmine及びPostgresのDockerImageが作成される
 ```
-.pidocker.sh install run path/to/DockerWithRaspberryPi/docker/setup/docker-compose.yml
+.pidocker.sh run path/to/DockerWithRaspberryPi/docker/setup/docker-compose.yml
 ```
 
 PostgresのDocker Image内でデータベースが作成されず、Redmineの起動に失敗するので別途コマンドで対応する
