@@ -95,12 +95,6 @@ CONTAINER_NAME=$1
 docker logs redmine # ログを確認
 docker exec -it ${CONTAINER_NAME} createdb redmine --encoding=utf8 -O redmine -U redmine # CREATE DATABASEする 
 ```
-
-## Install Redmine with Docker Compose
-```
-.pidocker.sh install compose
-```
-
 ## Apply Redmine Docker Image
 Redimeのdocker-composeを実行  
 Redmine及びPostgresのDockerImageが作成される
