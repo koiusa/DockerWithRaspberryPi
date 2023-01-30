@@ -71,7 +71,7 @@ sudo .pidocker.sh install compose
 
 Docker Image のルートディレクトリを設定のディレクトリにパス変更
 ```
-sudo .pidocker.sh install init
+sudo .pidocker.sh init
 ```
 
 ---
