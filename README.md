@@ -115,14 +115,11 @@ services:
 
 ## Apply Redmine Docker Image
 
-```
 Redimeのdocker-composeを実行  
 Redmine及びPostgresのDockerImageを作成する
 ```
 ./pidocker.sh up path/to/DockerWithRaspberryPi/docker/redmine/docker-compose.yml
 ```
-
----
 
 ## ShutDown Redmine Docker Image
 ```
