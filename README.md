@@ -114,6 +114,7 @@ services:
 ```
 
 docker/setup/setting.yml
+Redimeのdocker-composeの設定ファイルパスを指定する
 ```
 ...
 
