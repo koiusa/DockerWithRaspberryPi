@@ -4,11 +4,6 @@
 [![GitHub issues](https://img.shields.io/github/issues/koiusa/DockerWithRaspberryPi)](https://github.com/koiusa/DockerWithRaspberryPi/issues)
 [![GitHub license](https://img.shields.io/github/license/koiusa/DockerWithRaspberryPi)](https://github.com/koiusa/DockerWithRaspberryPi/blob/main/LICENSE)
 
-##
-設定ファイルの解釈は誤認している場合もありますが、ご了承のほどお願いします。  
-Please note that my may have misinterpreted the configuration file.
-
-
 ## Testing Operating Environment
 動作確認環境
 ```
