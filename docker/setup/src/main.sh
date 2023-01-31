@@ -43,3 +43,19 @@ function run_install() {
   	esac
   fi
 }
+
+function up_service() {
+  SERVICE_NAME=$1
+  SERVICE_YML=$(get_setting "${SERVICE_NAME}_env_service")
+  SERVICE_YML=$(echo ${SERVICE_YML} | sed 's/"//g')
+  up_docker-compose ${SERVICE_YML}
+}
+
+function down_service() {
+  SERVICE_NAME=$1
+  SERVICE_YML=$(get_setting "${SERVICE_NAME}_env_service")
+  SERVICE_YML=$(echo ${SERVICE_YML} | sed 's/"//g')
+  SERVICE_DIR=$(dirname ${SERVICE_YML})
+  down_docker-compose ${SERVICE_DIR}
+}
+

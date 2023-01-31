@@ -14,8 +14,8 @@ Usage: $(basename "$0") [OPTION]...
   init > [env | cocker]docker environment Setup
   start > docker engine Start
   stop > docker engine Stop
-  up [path/to/docker-compose.yml] > docker-compose up
-  down [path/to/docker-compose-dirctory] > docker-compose down
+  up [redmine | and more...] > docker-compose up
+  down [redmine | and more...] > docker-compose down
   clean > doker-compose process clean
 EOM
 }
@@ -38,12 +38,12 @@ function run_main() {
 		  stop_docker
 		  ;;
 	  up)
-                  up_docker-compose $2
-                  show_status all
+                  up_service $2
+                  show_status compose
                   ;;
           down)
-	          down_docker-compose $2
-		  show_status all
+	          down_service $2
+		  show_status compose
 		  ;;
 	  clean)
 		  clean_docker-compose

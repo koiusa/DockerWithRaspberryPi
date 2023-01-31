@@ -113,15 +113,25 @@ services:
 
 ```
 
+docker/setup/setting.yml
+```
+...
+
+redmine:
+  env:
+    service: /mnt/portable/docker/redmine/docker-compose.yml
+```
+
 ## Apply Redmine Docker Image
 
 Redimeのdocker-composeを実行  
 Redmine及びPostgresのDockerImageを作成する
 ```
-./pidocker.sh up path/to/DockerWithRaspberryPi/docker/redmine/docker-compose.yml
+./pidocker.sh up redmine
 ```
 
 ## ShutDown Redmine Docker Image
 ```
-./pidocker.sh down path/to/DockerWithRaspberryPi/docker/redmine
+./pidocker.sh down redmine
 ```
+

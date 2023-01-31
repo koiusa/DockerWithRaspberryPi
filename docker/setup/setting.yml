@@ -6,3 +6,8 @@ docker:
 docker_compose:
   env:
     version: v2.15.1
+
+redmine:
+  env:
+    service: /mnt/portable/docker/redmine/docker-compose.yml
+
