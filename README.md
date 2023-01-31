@@ -133,5 +133,5 @@ sudo ./pidocker.sh run path/to/DockerWithRaspberryPi/docker/setup/docker-compose
 
 PostgresのDocker Image内でデータベースが作成されず、Redmineの起動に失敗するので別途コマンドで対応する
 ```
-sudo path/to/DockerWithRaspberryPi/docker/setup/setup_postgres.sh redmine-redmine-db-1
+sudo path/to/DockerWithRaspberryPi/docker/redmine/setup_postgres.sh redmine-redmine-db-1
 ```
