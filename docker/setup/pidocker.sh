@@ -11,10 +11,11 @@ Usage: $(basename "$0") [OPTION]...
   -v > display version
   status [docker | compose | all] > display status
   install [docker | compose] > docker install
-  init > docker environment Setup
+  init > [env | cocker]docker environment Setup
   start > docker engine Start
   stop > docker engine Stop
-  run [path/to/docker-compose.yml] > docker-compose up
+  up [path/to/docker-compose.yml] > docker-compose up
+  down [path/to/docker-compose-dirctory] > docker-compose down
   clean > doker-compose process clean
 EOM
 }
@@ -42,10 +43,14 @@ function run_main() {
                   ;;
           down)
 	          down_docker-compose $2
+		  show_status all
 		  ;;
 	  clean)
 		  clean_docker-compose
 		  show_status compose
+		  ;;
+          *)
+		  usage
 		  ;;
   esac
 }
@@ -56,11 +61,11 @@ function get_option() {
   case "${OPT}" in
      v|-version)
 	     show_version
-	     exit
+	     exit 0
 	     ;;
      h|-help)
 	     usage
-	     exit
+	     exit 0
 	     ;; 
      \?)
 	     exit 1
@@ -81,6 +86,8 @@ shift `expr "${OPTIND}" - 1`
 
 if [ $# -ge 1 ]; then	
   run_main $@
+else
+  usage
 fi
 
 exit 0
