@@ -38,11 +38,11 @@ function show_status(){
 }
 
 function start_docker(){
- systemctl daemon-reload
- service docker start
+ sudo systemctl daemon-reload
+ sudo service docker start
 }
 
 function stop_docker(){
- service docker stop
- systemctl stop docker.socket
+ sudo service docker stop
+ sudo systemctl stop docker.socket
 }

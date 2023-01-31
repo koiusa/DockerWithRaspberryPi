@@ -61,17 +61,15 @@ docker_compose:
 
 ## Install Docker Engine
 スクリプト配置ディレクトリで実行
+
+Docker及びDocker Composeをインストールする
 ```
-sudo ./pidocker.sh install docker
+./pidocker.sh install 
 ```
 
+Docker Image のルートディレクトリを設定のディレクトリにパス変更する
 ```
-sudo ./pidocker.sh install compose
-```
-
-Docker Image のルートディレクトリを設定のディレクトリにパス変更
-```
-sudo ./pidocker.sh init
+./pidocker.sh init
 ```
 
 ---
@@ -126,12 +124,12 @@ docker exec -it ${CONTAINER_NAME} createdb redmine --encoding=utf8 -O redmine -U
 ```
 ## Apply Redmine Docker Image
 Redimeのdocker-composeを実行  
-Redmine及びPostgresのDockerImageが作成される
+Redmine及びPostgresのDockerImageを作成する
 ```
-sudo ./pidocker.sh run path/to/DockerWithRaspberryPi/docker/setup/docker-compose.yml
+./pidocker.sh run path/to/DockerWithRaspberryPi/docker/setup/docker-compose.yml
 ```
 
 PostgresのDocker Image内でデータベースが作成されず、Redmineの起動に失敗するので別途コマンドで対応する
 ```
-sudo path/to/DockerWithRaspberryPi/docker/redmine/setup_postgres.sh redmine-redmine-db-1
+path/to/DockerWithRaspberryPi/docker/redmine/setup_postgres.sh redmine-redmine-db-1
 ```

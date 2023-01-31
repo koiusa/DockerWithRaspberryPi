@@ -28,7 +28,7 @@ function run_main() {
 		  run_install $2
 		  ;;
 	  init)
-		  init_docker
+		  run_init $2
 		  ;;
           start)
 		  start_docker
@@ -36,24 +36,16 @@ function run_main() {
           stop)
 		  stop_docker
 		  ;;
-	  run)
-                  run_docker-compose $2
+	  up)
+                  up_docker-compose $2
                   show_status all
                   ;;
+          down)
+	          down_docker-compose $2
+		  ;;
 	  clean)
 		  clean_docker-compose
 		  show_status compose
-		  ;;
-  esac
-}
-
-function run_install() {
-  case "$1" in
-          docker)
-		  install_docker
-		  ;;
-          compose)
-		  install_docker-compose
 		  ;;
   esac
 }
