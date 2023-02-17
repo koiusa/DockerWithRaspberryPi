@@ -11,8 +11,6 @@ pipeline {
       steps {
         sh '''uname
 cat /etc/*release
-apt-get update && apt-get install sudouname
-cat /etc/*release
 apt-get update && apt-get install sudo'''
       }
     }
