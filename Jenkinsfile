@@ -1,8 +1,8 @@
 pipeline {
   agent {
     docker {
-      args 'args \'-u root:sudo\''
-      image 'python:3.6'
+      args '-u root:sudo'
+      image 'raspbian/stretch'
     }
 
   }
