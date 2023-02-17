@@ -11,3 +11,7 @@ redmine:
   env:
     service: /mnt/portable/docker/redmine/docker-compose.yml
 
+dns:
+  env:
+    service: /mnt/portable/docker/dns/docker-compose.yml
+
