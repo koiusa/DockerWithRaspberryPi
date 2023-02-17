@@ -28,4 +28,13 @@ cd ./docker
     }
 
   }
+  
+    post { 
+        failure { 
+            discordSend(description: BUILD_RESULT, footer: currentBuild.currentResult, webhookURL: WEBHOOK, successful: false)
+        }
+        success { 
+            discordSend(description: BUILD_RESULT, footer: currentBuild.currentResult, webhookURL: WEBHOOK, successful: true)
+        }
+    }
 }
