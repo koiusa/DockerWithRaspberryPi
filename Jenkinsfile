@@ -1,8 +1,8 @@
 pipeline {
   agent {
     docker {
-      image 'raspbian/stretch'
       args 'args \'-u root:sudo\''
+      image 'raspbian/jessie'
     }
 
   }
@@ -28,13 +28,14 @@ cd ./docker
     }
 
   }
-  
-    post { 
-        failure { 
-            discordSend(description: BUILD_RESULT, footer: currentBuild.currentResult, webhookURL: WEBHOOK, successful: false)
-        }
-        success { 
-            discordSend(description: BUILD_RESULT, footer: currentBuild.currentResult, webhookURL: WEBHOOK, successful: true)
-        }
+  post {
+    failure {
+      discordSend(description: BUILD_RESULT, footer: currentBuild.currentResult, webhookURL: WEBHOOK, successful: false)
     }
+
+    success {
+      discordSend(description: BUILD_RESULT, footer: currentBuild.currentResult, webhookURL: WEBHOOK, successful: true)
+    }
+
+  }
 }
