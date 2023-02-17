@@ -2,7 +2,7 @@ pipeline {
   agent {
     docker {
       args 'args \'-u root:sudo\''
-      image 'raspbian/jessie'
+      image 'raspbian/stretch:latest'
     }
 
   }
