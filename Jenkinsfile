@@ -2,7 +2,7 @@ pipeline {
   agent {
     docker {
       args 'args \'-u root:sudo\''
-      image 'python:latest'
+      image 'python:3.11'
     }
 
   }
