@@ -2,7 +2,7 @@ pipeline {
   agent {
     docker {
       args '-u root:sudo'
-      image 'raspbian'
+      image 'python:3.11'
     }
 
   }
