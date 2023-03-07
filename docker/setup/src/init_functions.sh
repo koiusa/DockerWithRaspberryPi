@@ -10,7 +10,7 @@ function set_docker_root() {
  sudo rsync -aXS /var/lib/docker/. ${DOCKER_PORTABLE_ROOT}
 
  DAEMON_FILE=/etc/docker/daemon.json
- echo "{\"graph\": \"${DOCKER_PORTABLE_ROOT}\"}" | sudo tee ${DAEMON_FILE} > /dev/null
+ echo "{\"data-root\": \"${DOCKER_PORTABLE_ROOT}\"}" | sudo tee ${DAEMON_FILE} > /dev/null
  
  #Result Display
  echo "${DAEMON_FILE}"
