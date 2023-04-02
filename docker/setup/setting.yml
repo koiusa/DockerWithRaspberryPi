@@ -15,3 +15,7 @@ dns:
   env:
     service: /mnt/portable/docker/dns/docker-compose.yml
 
+chappie:
+  env:
+    service: /mnt/portable/docker/chappie/docker-compose.yml
+
