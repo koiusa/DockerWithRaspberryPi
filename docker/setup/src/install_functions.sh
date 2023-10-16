@@ -8,7 +8,7 @@ function install_env(){
  sudo apt install gnupg2 pass
 
  #Address issue of Docker container and host not being able to synchronize time
- LIBSECCOMP=libseccomp2_2.5.4-1+b2_armhf.deb
+ LIBSECCOMP=libseccomp2_2.5.4-1+b3_arm64.deb
  sudo curl http://ftp.debian.org/debian/pool/main/libs/libseccomp/${LIBSECCOMP}
  sudo dpkg ${LIBSECCOMP}
 }
@@ -25,7 +25,6 @@ function install_docker-compose(){
  VERSION=$(get_setting "docker_compose_env_version")
  VERSION=$(echo $VERSION | sed 's/"//g')
  DISTRIBUTION=$(uname -s)-$(uname -m)
- DISTRIBUTION=${DISTRIBUTION/%?/}
  DOCKER_COMPOSE_DIR=/usr/local/bin/docker-compose
 
  #Docker-Compose Insrall

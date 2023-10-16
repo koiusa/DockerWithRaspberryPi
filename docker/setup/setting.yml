@@ -5,7 +5,7 @@ docker:
 
 docker_compose:
   env:
-    version: v2.15.1
+    version: v2.22.0
 
 redmine:
   env:
