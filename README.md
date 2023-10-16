@@ -8,26 +8,29 @@
 動作確認環境
 ```
 Model : Raspberry Pi 4 Model B Rev 1.2
-debian_version 10.13
-Linux raspberrypi 5.15.89-v7l+ #1620 SMP Wed Jan 18 12:22:20 GMT 2023 armv7l GNU/Linux
+No LSB modules are available.
+Distributor ID: Debian
+Description:    Debian GNU/Linux 12 (bookworm)
+Release:        12
+Codename:       bookworm
+Linux raspberrypi 6.1.0-rpi4-rpi-v8 #1 SMP PREEMPT Debian 1:6.1.54-1+rpt2 (2023-10-05) aarch64 GNU/Linux
 ```
 
 ```
 --Docker Status--
-Docker version 20.10.23, build 7155243
+Docker version 24.0.6, build ed223bc
  Docker Root Dir: /mnt/portable/docker/root
 WARNING: No memory limit support
 WARNING: No swap limit support
-WARNING: No kernel memory TCP limit support
-WARNING: No oom kill disable support
-CONTAINER ID   IMAGE         COMMAND                  CREATED       STATUS                  PORTS                                       NAMES
-ada69522cd71   redmine       "/docker-entrypoint.…"   4 hours ago   Up 4 hours              0.0.0.0:8080->3000/tcp, :::8080->3000/tcp   redmine
-516fa10ae736   postgres      "docker-entrypoint.s…"   4 hours ago   Up 4 hours              5432/tcp                                    redmine-redmine-db-1
-REPOSITORY    TAG       IMAGE ID       CREATED       SIZE
-redmine       latest    813d00988b99   2 weeks ago   508MB
-postgres      latest    14ffa9942d15   2 weeks ago   314MB
+CONTAINER ID   IMAGE           COMMAND                  CREATED        STATUS                      PORTS                                       NAMES
+2fb90cc0c95b   redmine         "/docker-entrypoint.…"   6 hours ago    Up 2 hours                  0.0.0.0:3000->3000/tcp, :::3000->3000/tcp   redmine
+69e288375091   postgres:15.0   "docker-entrypoint.s…"   6 hours ago    Up 2 hours                  5432/tcp                                    redmine-redmine-db-1
+e86bb6eef5da   c2ec9716031f    "python3"                6 months ago   Exited (137) 20 hours ago                                               chappie
+REPOSITORY   TAG       IMAGE ID       CREATED         SIZE
+redmine      latest    10c155391e06   3 days ago      686MB
+postgres     15.0      340f3238aa46   11 months ago   358MB
 --Docker Compose Status--
-Docker Compose version v2.15.1
+Docker Compose version v2.22.0
 NAME                STATUS              CONFIG FILES
 redmine             running(2)          /mnt/portable/docker/redmine/docker-compose.yml
 ```
